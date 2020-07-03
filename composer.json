@@ -1,0 +1,78 @@
+{
+    "name": "rozdol/bi-skel",
+    "description": "A framework for rapid busness app development",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alex Titoff",
+            "email": "rozdol@gmail.com"
+        }
+    ],
+    "require": {
+        "rozdol/bi": "^1.3",
+        "rozdol/loans": "^1.0",
+        "rozdol/payroll": "^1.1",
+        "rozdol/bi-assets": "^1.0",
+        "rozdol/bi-root": "^1.0",
+        "rozdol/bi-src": "^1.1",
+        "usmanhalalit/pixie": "^2.0",
+        "firebase/php-jwt": "^5.0",
+        "phpmyadmin/sql-parser": "^4.3",
+        "mashape/unirest-php": "^3.0",
+        "jejik/mt940": "dev-master",
+        "aws/aws-sdk-php": "^3.133",
+        "phpgangsta/googleauthenticator": "dev-master",
+        "phpoffice/phpspreadsheet": "^1.14",
+        "mpdf/mpdf": "^8.0",
+        "dompdf/dompdf": "^0.8.5",
+        "tecnickcom/tcpdf": "^6.3",
+        "jpgraph/jpgraph": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rozdol\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Rozdol\\": "tests",
+            "Rozdol\\App\\": "../components/bi/src/Bi",
+            "Rozdol\\Router\\": "../components/bi/src/Bi",
+            "Rozdol\\Db\\": "../components/bi/src/Bi",
+            "Rozdol\\Data\\": "../components/bi/src/Bi",
+            "Rozdol\\Dates\\": "../components/bi/src/Utils",
+            "Rozdol\\Utils\\": "../components/bi/src/Utils",
+            "Rozdol\\Html\\": "../components/bi/src/Utils",
+
+            "Rozdol\\Loans\\": "../components/loans/src/Loans",
+            "Rozdol\\Payroll\\": "../components/payroll/src/Payroll",
+            "Rozdol\\Mt940\\": "../components/Mt940/src/Mt940",
+
+            "Jejik\\MT940\\": "../forked/jejik-mt940/lib/jejik/MT940",
+            "Jejik\\MT940\\Reader\\": "../forked/jejik-mt940/lib/jejik/MT940",
+            "Jejik\\MT940\\Parser\\": "../forked/jejik-mt940/lib/jejik/MT940/Parser"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "extra":
+    {
+        "installer-paths":
+        {
+            "tmp/public/{$name}": ["rozdol/bi-assets"],
+            "tmp/root/{$name}": ["rozdol/bi-root"],
+            "tmp/src/{$name}": ["rozdol/bi-src"]
+        }
+    },
+    "scripts":
+    {
+        "post-create-project-cmd": [
+            "./post_create.sh"
+        ],
+        "post-update-cmd": [
+            "./post_update.sh"
+        ]
+    }
+}

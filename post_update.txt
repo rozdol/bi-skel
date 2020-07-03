@@ -1,0 +1,14 @@
+#!/bin/bash
+# mv ./src/.env ./.env.bkp
+
+rm -rf ./public/assets
+rm -rf ./bi
+# rm -r ./src
+
+mv  tmp/public/assets ./public/
+mv  tmp/root/bi ./
+# mv  tmp/src/src ./
+rm -rf tmp
+
+# mv ./.env.bkp ./src/.env
+exit
