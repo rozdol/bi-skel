@@ -20,7 +20,7 @@
         "firebase/php-jwt": "^5.0",
         "phpmyadmin/sql-parser": "^4.3",
         "mashape/unirest-php": "^3.0",
-        "jejik/mt940": "dev-master",
+        "jejik/mt940": "0.5.10",
         "aws/aws-sdk-php": "^3.133",
         "phpgangsta/googleauthenticator": "dev-master",
         "phpoffice/phpspreadsheet": "^1.14",
