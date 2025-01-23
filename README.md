@@ -55,6 +55,17 @@ composer create-project rozdol/bi-skel bi-framework dev-master
 cp bi-framework/src/.env.example bi-framework/src/.env
 ```
 
+Run manually if the folder structure is not ready:
+
+```bash
+mv  tmp/public/assets ./public/
+mv  tmp/root/bi ./
+mv  tmp/src/src ./
+rm -rf tmp
+cp ./src/.env.example ./src/.env
+cat post_update.txt > post_update.sh
+```
+
 - edit `src/.env`
 
 - Point your webserver to `/var/www/bi-framework/public`
@@ -73,7 +84,7 @@ Password: Pass1234
 
 Click on `Update System` to update database
 
-## Replace default src with your project
+## Replace default `src` with your project
 
 ```bash
 cd /var/www/
