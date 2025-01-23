@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "rozdol/bi": "^1.3",
-        "rozdol/loans": "^1.0",
-        "rozdol/payroll": "^1.1",
-        "rozdol/bi-assets": "^1.0",
-        "rozdol/bi-root": "^1.0",
-        "rozdol/bi-src": "^1.1",
+        "rozdol/bi": "*",
+        "rozdol/loans": "*",
+        "rozdol/payroll": "*",
+        "rozdol/bi-assets": "*",
+        "rozdol/bi-root": "*",
+        "rozdol/bi-src": "*",
         "usmanhalalit/pixie": "^2.0",
         "firebase/php-jwt": "^5.0",
         "phpmyadmin/sql-parser": "^4.3",
